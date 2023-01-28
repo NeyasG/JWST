@@ -1,2 +1,2 @@
-# JWST
-Fan made webpage about the James Webb Space Telescope. Made for a personal portfolio and learning React.
+# Portfolio - Neyas Guruswamy
+This is a repository for projects I have used to teach myself various programming languages and skills.
