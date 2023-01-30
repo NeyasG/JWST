@@ -1,2 +1,2 @@
-# Portfolio - Neyas Guruswamy
-This is a repository for projects I have used to teach myself various programming languages and skills.
+# JWST Fan Page - Neyas Guruswamy
+Fan made webpage made to learn React.
