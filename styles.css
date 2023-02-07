@@ -1,0 +1,44 @@
+/* Global Styling */
+* {
+    font-family: sans-serif;
+    margin: 0;
+}
+/* END Global Styling */
+
+/* SVG reponsiveness styling https://thenewcode.com/744/Make-SVG-Responsive */
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* END SVG reponsiveness styling */
+
+/* Nav-Bar Styling */
+.nav-item {
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #171717;
+    justify-content: space-between;
+}
+
+li {
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+/* END Nav-Bar Styling */
