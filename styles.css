@@ -1,44 +1,202 @@
-/* Global Styling */
+/* CSS structure (Resets, custom styles, utility classes) source - https://youtu.be/h3bTwCqX4ns?list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA */
+
+/*  Custom Properties */
+:root {
+    --clr-primary-700: #1D232D ;
+    --clr-primary-300: #7C8190 ;
+
+    --clr-neutral-400: #5A322E ;
+    --clr-neutral-900: #15191A;
+
+    --ff-primary: 'Space Mono', monospace;
+
+    --ff-body: var(--ff-primary);
+    --ff-heading: 'Space Grotesk', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semi-bold: 500;
+    --fw-bold: 700;
+
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-700: 2.5rem;
+
+    --fs-caption: var(--fs-300);
+    --fs-body: var(--fs-400);
+    --fs-primary-heading: var(--fs-700);
+    --fs-secondary-heading: var(--fs-500);
+    --fs-nav: var(--fs-400);
+    --fs-button: var(--fs-500);
+}
+
+/* CSS Reset source - https://andy-bell.co.uk/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
 * {
-    font-family: sans-serif;
-    margin: 0;
-}
-/* END Global Styling */
-
-/* SVG reponsiveness styling https://thenewcode.com/744/Make-SVG-Responsive */
-.svg-container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    vertical-align: middle;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
-.svg-content {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-/* END SVG reponsiveness styling */
-
-/* Nav-Bar Styling */
-.nav-item {
-
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-    background-color: #171717;
-    justify-content: space-between;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
-li {
-    color: white;
-    text-align: center;
-    padding: 16px;
+html,
+body {
+    height: 100%;
 }
-/* END Nav-Bar Styling */
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes */
+
+.text-primary-300 {
+    color: var(--clr-primary-300);
+}
+
+.text-primary-700 {
+  color: var(--clr-primary-700);
+}
+
+.text-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
+}
+
+.bg-primary-300 {
+  background-color: var(--clr-primary-300);
+}
+
+.bg-primary-700 {
+  background-color: var(--clr-primary-700);
+}
+
+.bg-neutral-400 {
+  background-color: var(--clr-neutral-400);
+}
+
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
+}
+
+.fw-bold { font-weight: var(--fw-bold); }
+.fw-semi-bold { font-weight: var(--fw-semi-bold); }
+.fw-regular { font-weight: var(--fw-regular); }
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+
+.home-body {
+  background: url(assets/webb-inspects-the-heart-of-the-phantom-galaxy_52324826014_o.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding)) * 2);
+  margin-inline: auto;
+}
+
+/* General Styling */
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: white;
+}
+
+.icon {
+  color: white;
+  text-align: center;
+  display: inline;
+}
+
+.centerpiece {
+  font-family: var(--ff-heading);
+  text-align: center;
+  margin-top: 15%;
+}
+
+.img-caption {
+  position: absolute;
+  bottom: 0px;
+  width: 40%;
+  font-size: var(--fs-caption);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 10vw;
+}
+
+.primary-header {
+  background-color: rgba(124, 129, 144, 0.15);
+}
+
