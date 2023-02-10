@@ -16,12 +16,24 @@
     <header class="primary-header">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.html">
+                <a class="icon" href="index.html">
                     <!-- <img class="nav-icon" src="assets/home_FILL1_wght400_GRAD0_opsz48.svg" alt="Home"> -->
                     <svg class="icon" fill="white" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
                         <path d="M8 42V18L24 6l16 12v24H28V28h-8v14Z"/>
                     </svg>
                 </a>
+
+                <!-- Mobile Nav bar -->
+                <button class="mobile-nav-toggle">
+                    <svg class="icon-hamburger icon" fill="white" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                        <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z"/>
+                    </svg>
+                    <svg class="icon-close icon" fill="white" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                        <path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"/>
+                    </svg>
+                    <span class="visually-hidden">Menu</span>
+                </button>
+
                 <nav class="primary-navigation">
                     <ul role="list" class="nav-list">
                         <li><a href="#">About JWST</a></li>
@@ -40,7 +52,7 @@
                     Explore the wonders of our Galaxy
                 </h1>
                 <p class="fs-body">Gallery</p>
-                <a href="#">
+                <a class="icon" href="gallery.html">
                     <svg class="icon" fill="white" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
                         <path d="M24 40 8 24l2.1-2.1 12.4 12.4V8h3v26.3l12.4-12.4L40 24Z"/>
                     </svg>
@@ -53,6 +65,6 @@
         Webb reveals the heart of M74 also known as the Phantom Galaxy. Allowing us to observe the nuclear
         star cluster at the galaxy's center.
     </div>
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

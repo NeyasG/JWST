@@ -100,6 +100,20 @@ svg {
 
 /* Utility Classes */
 
+/* https://a11y-guidelines.orange.com/en/articles/accessible-hiding/ */
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .text-primary-300 {
     color: var(--clr-primary-300);
 }
@@ -166,8 +180,14 @@ body {
   color: white;
 }
 
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding 0.5em;
+}
+
 .icon {
-  color: white;
   text-align: center;
   display: inline;
 }
@@ -199,6 +219,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5em;
 }
 
 .nav-list {
@@ -223,4 +244,78 @@ body {
   background-color: rgba(124, 129, 144, 0.15);
   backdrop-filter: blur(1px);
 }
+
+@media (max-width: 50em) {
+  .primary-navigation {
+    display: none;
+    inset: 6rem;
+  }
+
+  .nav-list {
+    display: grid;
+    background-color: rgba(29, 35, 45, 0.97);
+    border-radius: 0.5rem;
+    gap: 3rem;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 0 0.5em rgb(0, 0, 0, 0.6);
+
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus {
+    color: var(--clr-primary-700);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
+}
+
+.opened {
+  display: grid;
+  position: fixed;
+}
+
+.blurred {
+  backdrop-filter: blur(5px);
+  animation-name: blur-fade-in;
+  animation-duration: 0.3s;
+  color: transparent;
+
+}
+
+a.blurred {
+  opacity: 0%;
+}
+
+/* Animations */
+
+@keyframes blur-fade-in {
+  from {
+    backdrop-filter: blur(0px);
+  }
+
+  to {
+    backdrop-filter: blur(5px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+
 
