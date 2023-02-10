@@ -183,6 +183,16 @@ body {
   bottom: 0px;
   width: 40%;
   font-size: var(--fs-caption);
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+
+  mask: 
+  linear-gradient(to top,  transparent 0%, #fff 10% 90%, transparent 95%),
+  linear-gradient(to left, transparent 0%, #fff 15% 90%, transparent 95%);
+  mask-size: 110% 110%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-composite: intersect;
 }
 
 .nav-wrapper {
@@ -193,10 +203,24 @@ body {
 
 .nav-list {
   display: flex;
-  gap: 10vw;
+  gap: 5vw;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white
+}
+
+.nav-list a:hover {
+  color: var(--clr-primary-700);
+}
+
+.icon:hover {
+  fill: var(--clr-primary-700);
 }
 
 .primary-header {
   background-color: rgba(124, 129, 144, 0.15);
+  backdrop-filter: blur(1px);
 }
 
