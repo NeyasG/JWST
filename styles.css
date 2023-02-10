@@ -276,6 +276,16 @@ button {
   .mobile-nav-toggle .icon-close {
     display: none;
   }
+
+  .img-caption {
+    width: 100%;
+  }
+}
+
+@media (min-width: 50em) {
+  .mobile-nav-toggle {
+    display: none;
+  }
 }
 
 .opened {
