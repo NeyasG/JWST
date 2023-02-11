@@ -165,7 +165,7 @@ svg {
 }
 
 .container {
-  --max-width: 1110px;
+  --max-width: 1920px;
   --padding: 1rem;
 
   width: min(var(--max-width), 100% - (var(--padding)) * 2);
@@ -192,6 +192,11 @@ button {
   display: inline;
 }
 
+#home-icon {
+  display: flex;
+  margin-right: auto;
+}
+
 .centerpiece {
   font-family: var(--ff-heading);
   text-align: center;
@@ -206,6 +211,7 @@ button {
   padding: 1rem;
   backdrop-filter: blur(5px);
 
+  /* gradient blur around text. Could rework this for a better effect */
   mask: 
   linear-gradient(to top,  transparent 0%, #fff 10% 90%, transparent 95%),
   linear-gradient(to left, transparent 0%, #fff 15% 90%, transparent 95%);
@@ -219,12 +225,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5em;
+  padding: 0.3em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
-  gap: 5vw;
+  gap: 3rem;
 }
 
 .nav-list a {
@@ -245,6 +253,8 @@ button {
   backdrop-filter: blur(1px);
 }
 
+
+/* mobile-only properties */
 @media (max-width: 50em) {
   .primary-navigation {
     display: none;
@@ -253,7 +263,7 @@ button {
 
   .nav-list {
     display: grid;
-    background-color: rgba(29, 35, 45, 0.97);
+    background-color: rgba(91, 100, 114, 0.603);
     border-radius: 0.5rem;
     gap: 3rem;
     text-align: center;
@@ -282,6 +292,7 @@ button {
   }
 }
 
+/* desktop properties */
 @media (min-width: 50em) {
   .mobile-nav-toggle {
     display: none;
