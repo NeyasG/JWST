@@ -204,6 +204,7 @@ button {
 }
 
 .img-caption {
+  display: inline-block;
   position: absolute;
   bottom: 0px;
   width: 40%;
@@ -214,11 +215,17 @@ button {
   /* gradient blur around text. Could rework this for a better effect */
   mask: 
   linear-gradient(to top,  transparent 0%, #fff 10% 90%, transparent 95%),
-  linear-gradient(to left, transparent 0%, #fff 15% 90%, transparent 95%);
+  linear-gradient(to left, transparent 0%, #fff 10% 90%, transparent 95%);
   mask-size: 110% 110%;
   mask-position: center;
   mask-repeat: no-repeat;
   mask-composite: intersect;
+  border-radius: 5px;
+}
+
+.img-caption-container {
+  display: inline-block;
+
 }
 
 .nav-wrapper {
