@@ -23,7 +23,9 @@ function wwtReady() {
     wwt.settings.set_showCrosshairs(bShowCrosshairs);
     wwt.settings.set_showConstellationBoundries(bshowConstellationBoundaries);
     wwt.hideUI(!bShowUI);
-    wwt.setBackgroundImageByName('Digitized Sky Survey (Color)')
+
+    // Change the background image
+    wwt.setBackgroundImageByName("Deep Star Maps 2020")
 }
 
 // Calls init_wwt when HTML DOM is loaded
